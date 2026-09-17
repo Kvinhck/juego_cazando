@@ -40,3 +40,9 @@ button {
   color: darkred;
   margin-top: 15px;
 }
+
+.boton{
+  border-radius: 40px;
+  background-color: chartreuse;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
