@@ -3,7 +3,7 @@
 body {
   text-align: center;
   font-family: Arial, sans-serif;
-  background: url(caza.jpg) center / cover no-repeat, linear-gradient(160deg, #1e1b4b 0%, #4c1d95 100%);
+  background: url(fondo.jpg) center / cover no-repeat, linear-gradient(160deg, #1e1b4b 0%, #4c1d95 100%);
   background-attachment: fixed;
   color: #ffffff;
   margin: 0;
@@ -71,8 +71,8 @@ button.flecha {
   color: #ffffff;
   border: none;
   border-radius: 18px;
-  background: linear-gradient(145deg, #ff9a3c, #ff3d81);
-  box-shadow: 0 6px 0 #a3134a, 0 10px 18px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(145deg, #8c9a3f, #4f5a1f);
+  box-shadow: 0 6px 0 #00000000, 0 10px 18px rgba(0, 0, 0, 0.4);
   transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
 }
 
@@ -83,7 +83,7 @@ button.flecha:hover {
 
 button.flecha:active {
   transform: translateY(4px);
-  box-shadow: 0 2px 0 #a3134a, 0 4px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 0 #2e3210, 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 button.flecha:focus-visible {

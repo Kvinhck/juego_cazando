@@ -1,2 +1,6 @@
 
-(le pasé la imagen) quiero que añadas esta imagen como fondo del juego
+(le pasé la imagen) quiero que añadas esta imagen como fondo del juego (dañó el programa entonces usé un git restore)
+--------segundo prompt-----------
+quiero que la imagen sea el fondo de la pagina web, no del canvas
+---------tercer prompt------
+ayudame a poner el color de las flechas a uno que combine con el fondo
