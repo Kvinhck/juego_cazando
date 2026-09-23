@@ -1,13 +1,27 @@
+@charset "UTF-8";
+
+
+
 body {
   text-align: center;
   font-family: Arial, sans-serif;
-  background: #f0f0f0;
+  background: linear-gradient(160deg, #1e1b4b 0%, #4c1d95 100%);
+  background-attachment: fixed;      
+  color: #ffffff;                 
   margin: 0;
   padding: 20px;
+  min-height: 100vh;               
+  box-sizing: border-box;            
 }
 
 h1 {
   margin-bottom: 5px;
+  color: #ffd166;                                  
+  text-shadow: 0 0 12px rgba(255, 209, 102, 0.6);  
+}
+
+p {
+  color: #c7c3ff;
 }
 
 .panel {
@@ -18,9 +32,24 @@ h1 {
   gap: 30px;
 }
 
+.panel > span {
+  background: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;             
+  padding: 8px 22px;
+  font-weight: bold;
+}
+
+#puntos, #tiempo {
+  color: #ffd166;
+  font-size: 22px;
+}
+
 canvas {
-  background: white;
-  border: 2px solid black;
+  background: white;                 
+  border: 4px solid #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.45), 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .controles {
@@ -28,16 +57,65 @@ canvas {
 }
 
 button {
-  margin: 5px;
-  padding: 10px 16px;
-  font-size: 18px;
-  cursor: pointer;
+  margin: 5px;                       
+  padding: 10px 16px;                
+  font-size: 18px;                   
+  cursor: pointer;                   
 }
+
+button.flecha {
+  position: relative;                
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  font-size: 28px;
+  color: #ffffff;
+  border: none;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #ff9a3c, #ff3d81);
+  box-shadow: 0 6px 0 #a3134a, 0 10px 18px rgba(0, 0, 0, 0.4);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+button.flecha:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.12);
+}
+
+button.flecha:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #a3134a, 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+button.flecha:focus-visible {
+  outline: 3px solid #ffd166;
+  outline-offset: 3px;
+}
+
+button.flecha::after {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  font-size: 14px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+button.flecha-arriba::after     { content: "⬆️"; }
+button.flecha-izquierda::after  { content: "⬅️"; }
+button.flecha-abajo::after      { content: "⬇️"; }
+button.flecha-derecha::after    { content: "➡️"; }
 
 #mensaje {
   font-size: 20px;
   font-weight: bold;
-  color: darkred;
+
+  color: #ffd166;
   margin-top: 15px;
 }
 
@@ -45,4 +123,25 @@ button {
   border-radius: 40px;
   background-color: chartreuse;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #1e1b4b;
+  border: none;
+  box-shadow: 0 5px 0 #6aa800, 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.boton:hover {
+  filter: brightness(1.1);
+}
+
+.boton:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #6aa800;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button.flecha,
+  button.flecha:hover,
+  button.flecha:active {
+    transition: none;
+    transform: none;
+  }
 }
